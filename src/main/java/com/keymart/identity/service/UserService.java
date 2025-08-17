@@ -1,16 +1,15 @@
 package com.keymart.identity.service;
 
-import com.keymart.identity.model.User;
-import org.springframework.stereotype.Service;
+import com.keymart.identity.dto.UserDTO;
 
 import java.util.List;
 
 public interface UserService {
-    User add(User user);
-    User update(User user);
+    UserDTO add(UserDTO userDto);
+    UserDTO update(UserDTO userDto);
     Boolean deleteById(Long id);
-    User findById(Long id);
-    List<User> findAll();
-    User findByEmail(String email);
+    UserDTO findById(Long id);
+    List<UserDTO> findAll();
+    UserDTO findByEmail(String email);
 
 }

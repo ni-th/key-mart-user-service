@@ -12,8 +12,7 @@ public class UserController {
     final UserService userService;
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody UserDTO userDTO) {
-//        userService.add(userDTO);
-        System.out.println(userDTO);
+        userService.add(userDTO);
         return ResponseEntity.ok(userDTO);
     }
     @PostMapping("/login")
