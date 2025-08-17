@@ -2,7 +2,6 @@ package com.keymart.identity.controller;
 import com.keymart.identity.dto.UserDTO;
 import com.keymart.identity.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,8 +11,7 @@ public class UserController {
     final UserService userService;
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody UserDTO userDTO) {
-        userService.add(userDTO);
-        return ResponseEntity.ok(userDTO);
+        return ResponseEntity.ok(userService.add(userDTO));
     }
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody UserDTO userDTO) {
