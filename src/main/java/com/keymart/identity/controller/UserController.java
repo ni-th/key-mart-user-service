@@ -1,15 +1,19 @@
 package com.keymart.identity.controller;
-
 import com.keymart.identity.dto.UserDTO;
-import com.keymart.identity.model.User;
-import jakarta.servlet.http.HttpServletRequest;
+import com.keymart.identity.service.UserService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequiredArgsConstructor
 public class UserController {
+    final UserService userService;
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody UserDTO userDTO) {
+//        userService.add(userDTO);
+        System.out.println(userDTO);
         return ResponseEntity.ok(userDTO);
     }
     @PostMapping("/login")

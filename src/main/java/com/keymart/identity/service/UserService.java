@@ -1,6 +1,7 @@
 package com.keymart.identity.service;
 
 import com.keymart.identity.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

@@ -4,8 +4,10 @@ import com.keymart.identity.model.User;
 import com.keymart.identity.repository.UserRepository;
 import com.keymart.identity.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+@Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     final UserRepository userRepository;
